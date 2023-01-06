@@ -1,2 +1,113 @@
+/* global & shared */
+:root {
+  --default-font: 1em/1.5 'Poppins', 'Verdana', sans-serif;
+  --main-bg-color: hsl(0, 0%, 98%);
+  --default-font-color: hsl(229, 6%, 66%);
+  --emphasis-font-color: hsl(234, 12%, 34%);
+  --supervisor-border-color: hsl(180, 62%, 55%);
+  --team-builder-border-color: hsl(0, 78%, 62%);
+  --karma-border-color: hsl(34, 97%, 64%);
+  --calculator-border-color: hsl(212, 86%, 64%);
+}
+
+html {
+  font-size: 0.9375em;
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--default-font-color);
+  font: var(--default-font);
+  padding: 5.5em 2em;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+h2,
+.header-supplement {
+  font-weight: 600;
+}
+
+h1,
+h2,
+.header-supplement {
+  color: var(--emphasis-font-color);
+}
+
+/* header */
+h1,
+.header-supplement {
+  font-size: 1.5em;
+}
+
+.header-supplement {
+  margin-bottom: 1em;
+}
+
+/* main */
+h2 {
+  font-size: 1.25em;
+}
+
+.features {
+  display: grid;
+  gap: 1.5em;
+  margin-top: 5.5em;
+}
+
+[class^='feature-'] {
+  border-radius: 0.5em;
+  box-shadow: 0 1em 1.5em 0 hsla(229, 6%, 66%, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 2em;
+  border-top: 0.3em solid;
+}
+
+[class^='feature-'] > p {
+  font-size: 0.9em;
+  margin: 0.3em 0 2em;
+}
+
+[class^='feature-']::after{
+  align-self: flex-end;
+}
+
+.feature-supervisor{
+  border-color: var(--supervisor-border-color);
+}
+
+.feature-team-builder{
+  border-color: var(--team-builder-border-color);
+}
+
+.feature-karma{
+  border-color: var(--karma-border-color);
+}
+
+.feature-calculator{
+  border-color: var(--calculator-border-color);
+}
+
+.feature-supervisor::after {
+  content: url(../images/icon-supervisor.svg);
+}
+
+.feature-team-builder::after {
+  content: url(../images/icon-team-builder.svg);
+}
+
+.feature-karma::after {
+  content: url(../images/icon-karma.svg);
+}
+
+.feature-calculator::after {
+  content: url(../images/icon-calculator.svg);
+}
+
+/* footer */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
