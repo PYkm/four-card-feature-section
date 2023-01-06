@@ -38,6 +38,10 @@ h2,
 }
 
 /* header */
+header {
+  text-align: center;
+}
+
 h1,
 .header-supplement {
   font-size: 1.5em;
