@@ -115,3 +115,58 @@ h2 {
 /* footer */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/* middle and large screen shared */
+@media (min-width: 38em) {
+    h1,
+    .header-supplement {
+      font-size: 2.5em;
+    }
+
+    body {
+      padding: 5em 12%;
+    }
+
+    .header-supplement {
+      margin-bottom: 0.5em;
+    }
+
+    .features {
+      align-items: center;
+      gap: 2em;
+    }
+
+}
+
+/* middle screen  */
+@media (min-width: 31em) and (max-width: 75em) {
+  .features {
+    align-items: stretch;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* large screen  */
+@media (min-width: 75em) {
+  header {
+    padding: 0 25%;
+  }
+
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature-supervisor,
+  .feature-calculator {
+    grid-row: 1 / 3;
+  }
+
+  .feature-team-builder{
+    grid-row: 1;
+  }
+
+  .feature-karma{
+    grid-row: 2;
+  }
+
+}
